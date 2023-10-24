@@ -16,9 +16,9 @@ import numpy as np
 from torch.nn import CrossEntropyLoss, Dropout, Softmax, Linear, Conv2d, LayerNorm
 from scipy import ndimage
 
-from entmax import EntmaxAlpha
+from .entmax import EntmaxAlpha
 
-from activations import sparsemax
+from .activations import sparsemax
 
 ATTENTION_Q = "MultiHeadDotProductAttention_1/query"
 ATTENTION_K = "MultiHeadDotProductAttention_1/key"

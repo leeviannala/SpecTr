@@ -8,7 +8,7 @@ from einops import rearrange, repeat
 #from vit_pytorch import Transformer
 from scipy import ndimage
 
-from vit_modeling import Transformer
+from .vit_modeling import Transformer
 
 def np2th(weights, conv=False):
     """Possibly convert HWIO to OIHW."""
