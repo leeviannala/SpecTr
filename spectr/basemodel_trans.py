@@ -52,7 +52,7 @@ class EncodeTrans_V3DUNet(nn.Module):
         if isinstance(f_maps, int):
             f_maps = number_of_features_per_level(f_maps, num_levels=num_levels)
         f_spatials = [[max_seq//2**i, spatial_size[1]//2**i, spatial_size[0]//2**i] for i in range(num_levels)]
-
+        print(f_spatials)
         print(f'feature map is {f_maps} and layer_order is {layer_order} and \n feature spatial size is {f_spatials} \n \
               and chooselayer is {choose_translayer} \n conv_kernel_size is {conv_kernel_size} and conv_padding is {conv_padding}')#[32, 64, 128, 256]
         self.vis = vis
