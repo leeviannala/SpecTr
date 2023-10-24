@@ -16,7 +16,7 @@ import numpy as np
 from torch.nn import CrossEntropyLoss, Dropout, Softmax, Linear, Conv2d, LayerNorm
 from scipy import ndimage
 
-from .entmax import EntmaxAlpha
+from .entmax import EntmaxAlpha, entmax_bisect
 
 from .activations import sparsemax
 
@@ -70,7 +70,7 @@ class Attention(nn.Module):
         if use_entmax15 == 'softmax':
             self.att_fn = F.softmax
         elif use_entmax15 == 'entmax_bisect':
-            self.att_fn = EntmaxAlpha(1.33)
+            self.att_fn = entmax_bisect(1.33)
         elif use_entmax15 == 'sparsemax':
             self.att_fn = sparsemax
         elif use_entmax15 == 'adaptive_entmax':
