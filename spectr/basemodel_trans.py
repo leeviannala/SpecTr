@@ -7,7 +7,7 @@ Created on Sun Feb  7 15:23:57 2021
 
 import torch.nn as nn
 import torch
-from block_3d import (Decoder,DoubleConv,AdaptivePool_Encoder,
+from .block_3d import (Decoder,DoubleConv,AdaptivePool_Encoder,
                       Trans_block)
                      
 
